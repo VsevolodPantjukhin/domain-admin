@@ -1,0 +1,574 @@
+{
+	"info": {
+		"_postman_id": "e6253885-5693-4fed-a6c6-87b6d4a109e2",
+		"name": "domain-admin",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33347220"
+	},
+	"item": [
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Manager\",\r\n  \"email\": \"kolyanmoshenok@gmail.com\",\r\n  \"password\": \"Issay54411\",\r\n  \"whitelist\":[],\r\n  \"blacklist\": [\"65e4befcb06aa81974bdeb2a\"]\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/v1/auth/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"v1",
+								"auth",
+								"register"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "default",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"email\": \"kolyanmoshenok@gmail.com\",\r\n  \"password\": \"Issay54411\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/v1/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"v1",
+								"auth",
+								"login"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "default",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Tags",
+			"item": [
+				{
+					"name": "Create tag",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2NWU1YTY2MjY0YzhkZDA5MDhiNWMzZjIiLCJpYXQiOjE3MDk1NDkyNTMsImV4cCI6MTcwOTU1MTA1MywidHlwZSI6ImFjY2VzcyJ9.kNMumk1RegcLPGJoNsvEHIoTVJIlx0gS5n1O4rWACs8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"label\":\"покупки\"   \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/v1/tags",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"v1",
+								"tags"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all tags",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2NWU1YTY2MjY0YzhkZDA5MDhiNWMzZjIiLCJpYXQiOjE3MDk1NDkyNTMsImV4cCI6MTcwOTU1MTA1MywidHlwZSI6ImFjY2VzcyJ9.kNMumk1RegcLPGJoNsvEHIoTVJIlx0gS5n1O4rWACs8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"label\":\"Телеграм канал\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/v1/tags",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"v1",
+								"tags"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get tag by Id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2NWU1YTQ4YTY0YzhkZDA5MDhiNWMzYzYiLCJpYXQiOjE3MDk1NDg2OTMsImV4cCI6MTcwOTU1MDQ5MywidHlwZSI6ImFjY2VzcyJ9.1ozT8YTBmT_PabvyZnuRzm6ZRMEWOOHD_YOv9nb_ijQ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"label\":\"Телеграм канал\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/v1/tags/65e3156c54c65d40608cf606",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"v1",
+								"tags",
+								"65e3156c54c65d40608cf606"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get tag by Label",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2NWU1YTQ4YTY0YzhkZDA5MDhiNWMzYzYiLCJpYXQiOjE3MDk1NDg2OTMsImV4cCI6MTcwOTU1MDQ5MywidHlwZSI6ImFjY2VzcyJ9.1ozT8YTBmT_PabvyZnuRzm6ZRMEWOOHD_YOv9nb_ijQ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"label\":\"Телеграм канал\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/v1/tags/65e3156c54c65d40608cf606",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"v1",
+								"tags",
+								"65e3156c54c65d40608cf606"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Rename label",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2NWUzMGFiNjQ1Y2JlOTI3NzA5YjlhOWYiLCJpYXQiOjE3MDkzODA0MzcsImV4cCI6MTcwOTM4MjIzNywidHlwZSI6ImFjY2VzcyJ9.ZZ_gc3SlcWv3XAp5YL5fzOxdDgvdvE0VuMZC8mq5SF8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"label\":\"Телеграм канал 1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/v1/tags/65e3156c54c65d40608cf606",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"v1",
+								"tags",
+								"65e3156c54c65d40608cf606"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete tag",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2NWUzMGFiNjQ1Y2JlOTI3NzA5YjlhOWYiLCJpYXQiOjE3MDkzODA0MzcsImV4cCI6MTcwOTM4MjIzNywidHlwZSI6ImFjY2VzcyJ9.ZZ_gc3SlcWv3XAp5YL5fzOxdDgvdvE0VuMZC8mq5SF8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"label\":\"Телеграм канал 1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/v1/tags/65e3156c54c65d40608cf606",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"v1",
+								"tags",
+								"65e3156c54c65d40608cf606"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Domain",
+			"item": [
+				{
+					"name": "Create Domain",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2NWU1YTQ4YTY0YzhkZDA5MDhiNWMzYzYiLCJpYXQiOjE3MDk1NDg2OTMsImV4cCI6MTcwOTU1MDQ5MywidHlwZSI6ImFjY2VzcyJ9.1ozT8YTBmT_PabvyZnuRzm6ZRMEWOOHD_YOv9nb_ijQ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"domain\":\"https://vk.com/audios533448205?section=all\",\r\n    \"dateCreated\":1709391241,\r\n    \"registrar\":\"Ivan Ivanov MidnControl\",\r\n    \"account\":\"default@da.net\",\r\n    \"tags\":[ {\r\n            \"label\": \"Телеграм канал\",\r\n            \"tagId\": \"65e317f254c65d40608cf619\"\r\n        }]\r\n\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/v1/domains",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"v1",
+								"domains"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all domains",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2NWU1YTQ4YTY0YzhkZDA5MDhiNWMzYzYiLCJpYXQiOjE3MDk1NDg2OTMsImV4cCI6MTcwOTU1MDQ5MywidHlwZSI6ImFjY2VzcyJ9.1ozT8YTBmT_PabvyZnuRzm6ZRMEWOOHD_YOv9nb_ijQ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"domain\":\"https://vk.com/audios533448205?section=all\",\r\n    \"dateCreated\":1709391241,\r\n    \"registrar\":\"Ivan Ivanov MidnControl\",\r\n    \"account\":\"default@da.net\",\r\n    \"tags\":[ {\r\n            \"label\": \"Телеграм канал\",\r\n            \"tagId\": \"65e317f254c65d40608cf619\"\r\n        }]\r\n\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/v1/domains",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"v1",
+								"domains"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get domain by id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2NWU1YTQ4YTY0YzhkZDA5MDhiNWMzYzYiLCJpYXQiOjE3MDk1NDg2OTMsImV4cCI6MTcwOTU1MDQ5MywidHlwZSI6ImFjY2VzcyJ9.1ozT8YTBmT_PabvyZnuRzm6ZRMEWOOHD_YOv9nb_ijQ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"domain\":\"https://vk.com/audios533448205?section=all\",\r\n    \"dateCreated\":1709391241,\r\n    \"registrar\":\"Ivan Ivanov MidnControl\",\r\n    \"account\":\"default@da.net\",\r\n    \"tags\":[ {\r\n            \"label\": \"Телеграм канал\",\r\n            \"tagId\": \"65e317f254c65d40608cf619\"\r\n        }]\r\n\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/v1/domains/65e33fc1c725d15f54c3c0d7",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"v1",
+								"domains",
+								"65e33fc1c725d15f54c3c0d7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get domain by Name",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2NWU0YmU5N2IwNmFhODE5NzRiZGViMTgiLCJpYXQiOjE3MDk1NDMzNjUsImV4cCI6MTcwOTU0NTE2NSwidHlwZSI6ImFjY2VzcyJ9.ft3BqI_0MQ0lhCBh9f3cB7VhIZPuA2EtbbTFsijE8dc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"domain\":\"https://vk.com/audios533448205?section=all\",\r\n    \"dateCreated\":1709391241,\r\n    \"registrar\":\"Ivan Ivanov MidnControl\",\r\n    \"account\":\"default@da.net\",\r\n    \"tags\":[ {\r\n            \"label\": \"Телеграм канал\",\r\n            \"tagId\": \"65e317f254c65d40608cf619\"\r\n        }]\r\n\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/v1/domains/65e33fc1c725d15f54c3c0d7",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"v1",
+								"domains",
+								"65e33fc1c725d15f54c3c0d7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update domain",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2NWU1YTQ4YTY0YzhkZDA5MDhiNWMzYzYiLCJpYXQiOjE3MDk1NDg2OTMsImV4cCI6MTcwOTU1MDQ5MywidHlwZSI6ImFjY2VzcyJ9.1ozT8YTBmT_PabvyZnuRzm6ZRMEWOOHD_YOv9nb_ijQ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"domain\":\"https://vk.com/audios533448205\",\r\n    \"dateCreated\":1709391551,\r\n    \"registrar\":\"Ivan Ivanov MidnControl changed\",\r\n    \"tags\":[ {\r\n            \"label\": \"Телеграм канал\",\r\n            \"tagId\": \"65e317f254c65d40608cf619\"\r\n        },\r\n        {\r\n    \"label\": \"Беттинг\",\r\n    \"tagId\": \"65e340e96028595fe4a653e2\"\r\n}]\r\n\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/v1/domains/65e33fc1c725d15f54c3c0d7",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"v1",
+								"domains",
+								"65e33fc1c725d15f54c3c0d7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get domain by id Copy",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2NWU1YTY2MjY0YzhkZDA5MDhiNWMzZjIiLCJpYXQiOjE3MDk1NDkxNTQsImV4cCI6MTcwOTU1MDk1NCwidHlwZSI6ImFjY2VzcyJ9.d2wuQvaPoUw6oNVrXSNuGM5W6ArBNDUzk4sVZxXuvmw",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"domain\":\"100up.ru/\",\r\n    \"dateCreated\":1709544310000,\r\n    \"registrar\":\"Николай\",\r\n    \"account\":\"ivan@gmail.com\",\r\n    \"tags\":[ {\r\n            \"label\": \"Спорт\",\r\n            \"tagId\": \"65e4bf37b06aa81974bdeb38\"\r\n        }]\r\n\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/v1/domains/65e33fc1c725d15f54c3c0d7",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"v1",
+								"domains",
+								"65e33fc1c725d15f54c3c0d7"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

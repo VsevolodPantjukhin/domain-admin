@@ -1,0 +1,23 @@
+{
+    "qwerty":{
+        "name":"manager",
+        "whitelist":["betting"],
+        "blacklist":[]
+    },
+    "def":{
+        "name":"default",
+        "whitelist":"*",
+        "blacklist":[]
+    },
+    "test1":{
+        "name":"manager",
+        "whitelist":["betting"],
+        "blacklist":["sport"]
+    },
+    "test2":{
+        "name":"Николай Мошенок",
+        "whitelist":"*",
+        "blacklist":["sport"]
+    }
+
+}

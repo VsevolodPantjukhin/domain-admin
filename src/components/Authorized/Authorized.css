@@ -1,0 +1,110 @@
+.authorized-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.Chips {
+    margin: 14px 4px;
+}
+
+.authorized-header-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.datePickerMargin {
+    width: 544px;
+}
+
+.AutocompleteMargin {
+    margin: 14px 0px;
+    width: 544px;
+}
+
+.domain-input {
+    margin: 4px 0px;
+    margin-bottom: 14px;
+    width: 544px;
+    padding: 16px;
+    font-size: 14px;
+    border: 1px solid rgb(70, 79, 96);
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+
+.domain-input-sub {
+    margin-bottom: 18px;
+    width: 544px;
+    padding: 16px;
+    font-size: 14px;
+    border: 1px solid rgb(70, 79, 96);
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+
+.authorized-header {
+    padding: 0px;
+    color: rgb(0, 0, 0);
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 29px;
+    letter-spacing: 0px;
+    text-align: left;
+}
+
+.authorized-header-button-add {
+    padding: 4px 34px;
+    border-radius: 4px;
+    border: 0;
+    background: rgb(0, 123, 255);
+    color: rgb(255, 255, 255);
+    font-size: 14px;
+    line-height: 17px;
+    cursor: pointer;
+    margin: 4px 4px 4px 0px;
+}
+
+.domen-info {
+    display: inline-block;
+    padding: 0px;
+    margin-left: 90px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17px;
+    letter-spacing: 0px;
+    text-align: left;
+}
+
+.expiration-domain {
+    display: inline-block;
+    padding: 0px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17px;
+    letter-spacing: 0px;
+    text-align: left;
+    margin-left: 400px;
+}
+
+.domen {
+    display: inline-block;
+    padding: 0px;
+    margin-left: 90px;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 29px;
+    letter-spacing: 0px;
+    text-align: left;
+}
+
+.date-domen {
+    display: inline-block;
+    padding: 0px;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 29px;
+    letter-spacing: 0px;
+    text-align: left;
+    margin-left: 360px;
+}
